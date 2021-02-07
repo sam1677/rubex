@@ -1,8 +1,9 @@
 package rubex
 
 /*
-#cgo CFLAGS: -I${SRCDIR}/../../../../../clibs/include
-#cgo LDFLAGS: -L${SRCDIR}/../../../../../clibs/lib -lonig
+#cgo pkg-config: --define-variable=prefix=. oniguruma
+#cgo CFLAGS: -I${SRCDIR}/include
+#cgo LDFLAGS: -L${SRCDIR}/lib -lonig
 #include <stdlib.h>
 #include <oniguruma.h>
 #include "chelper.h"
@@ -15,6 +16,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+
 	//"runtime"
 	"strconv"
 	"sync"
